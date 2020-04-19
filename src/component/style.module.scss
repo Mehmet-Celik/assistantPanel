@@ -1,0 +1,33 @@
+.logo {
+  display: flex;
+  width: 120px;
+  height: 31px;
+  background: rgba(255, 255, 255, 0.2);
+  margin: 16px 24px 16px -44px;
+  float: left;
+  color: white;
+}
+
+.logoText {
+  position: absolute;
+  top: 0;
+}
+
+.menu {
+  margin: -4px 0px 0px 0px;
+}
+
+.newIssue {
+  display: flex;
+  flex: 1;
+  justify-content: flex-end;
+  margin: 16px;
+}
+
+.form {
+  margin-top: 100px;
+}
+
+.editForm {
+  margin-top: 30px;
+}
