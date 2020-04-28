@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Layout, Menu } from "antd";
-import style from "./style.module.scss";
+import style from "./css/table.module.scss";
 const { Header } = Layout;
 
 class navbar extends Component {

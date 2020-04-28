@@ -14,7 +14,7 @@ class App extends Component {
     this.state = {
       issue: "dts",
       team: "client",
-      flag: true
+      flag: "1"
     };
     this.handleIssueChange = this.handleIssueChange.bind(this);
     this.handleTeamChange = this.handleTeamChange.bind(this);
@@ -24,20 +24,20 @@ class App extends Component {
   handleIssueChange(issue) {
     this.setState({
       issue,
-      flag: true
+      flag: "1"
     })
   }
 
   handleTeamChange(team) {
     this.setState({
       team ,
-      flag: true
+      flag: "1"
     })
   }
   
   handleFlagChange(flag) {
     this.setState({
-      flag
+      flag: flag
     })
   }
 

@@ -1,13 +1,13 @@
 {
   "dts": [
     {
-      "dtsId": "adsffadfsa",
+      "dtsId": "burak",
       "link": "https://www.youtube.com/?hl=tr&gl=TR",
-      "description": "dasfdfsadafs",
+      "description": "dasfdfsadafdasfdfsadafsdasfdfsadafsdasfdfsadafsdasfdfsadafsdasfdfsadafsdasfdfsadafsdasfdfsadafsdasfdfsadafsdasfdfsadafss",
       "labels": [
-        "fsadsdfa",
-        "dfasafsd",
-        "adf"
+        "Monitor",
+        "Batch",
+        "MML"
       ],
       "team": "server",
       "mergeRequest": "dsfadsaf",
@@ -17,13 +17,13 @@
       "version": "adfssadfdfs"
     },
     {
-      "dtsId": "adsffadfsas",
+      "dtsId": "mehmet",
       "link": "https://www.youtube.com/?hl=tr&gl=TR",
-      "description": "dasfdfsadafs",
+      "description": "dasfdfsadafdasfdfsadafsdasfdfsadafsdasfdfsadafsdasfdfsadafsdasfdfsadafsdasfdfsadafsdasfdfsadafsdasfdfsadafsdasfdfsadafss",
       "labels": [
-        "fsfa",
-        "dfasafsd",
-        "adsfdsaf"
+        "Monitor",
+        "Batch",
+        "MML"
       ],
       "team": "server",
       "mergeRequest": "dsfadsaf",
@@ -35,7 +35,7 @@
     {
       "dtsId": "adsffadfscv",
       "link": "https://www.youtube.com/?hl=tr&gl=TR",
-      "description": "dasfdfsadafs",
+      "description": "dasfdfsadafdasfdfsadafsdasfdfsadafsdasfdfsadafsdasfdfsadafsdasfdfsadafsdasfdfsadafsdasfdfsadafsdasfdfsadafsdasfdfsadafss",
       "labels": [
         "fsadsdfa",
         "dfasafsd",
@@ -51,7 +51,7 @@
     {
       "dtsId": "adsffadfsyt",
       "link": "https://www.youtube.com/?hl=tr&gl=TR",
-      "description": "dasfdfsadafs",
+      "description": "dasfdfsadafdasfdfsadafsdasfdfsadafsdasfdfsadafsdasfdfsadafsdasfdfsadafsdasfdfsadafsdasfdfsadafsdasfdfsadafsdasfdfsadafss",
       "labels": [
         "fsa",
         "dsd",
@@ -67,7 +67,7 @@
     {
       "dtsId": "adsffadfsjh",
       "link": "https://www.youtube.com/?hl=tr&gl=TR",
-      "description": "dasfdfsadafs",
+      "description": "dasfdfsadafdasfdfsadafsdasfdfsadafsdasfdfsadafsdasfdfsadafsdasfdfsadafsdasfdfsadafsdasfdfsadafsdasfdfsadafsdasfdfsadafss",
       "labels": [
         "fsadsdfa",
         "dfasafsd",
@@ -83,7 +83,7 @@
     {
       "dtsId": "adsffadfspo",
       "link": "https://www.youtube.com/?hl=tr&gl=TR",
-      "description": "dasfdfsadafs",
+      "description": "dasfdfsadafdasfdfsadafsdasfdfsadafsdasfdfsadafsdasfdfsadafsdasfdfsadafsdasfdfsadafsdasfdfsadafsdasfdfsadafsdasfdfsadafss",
       "labels": [
         "fsada",
         "dfad",
@@ -197,7 +197,7 @@
       "link": "https://www.youtube.com/?hl=tr&gl=TR",
       "description": "dasfdfsadafs",
       "labels": [
-        "fsadsdfa",
+        "Trace",
         "dfasafsd",
         "adf"
       ],

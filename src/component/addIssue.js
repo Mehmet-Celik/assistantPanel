@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import { Form, Input, Select, Button, DatePicker, message } from "antd";
-import style from "./style.module.scss";
+import style from "./css/table.module.scss";
 import Axios from "axios";
-
+import { ArrowLeftOutlined } from "@ant-design/icons";
 
 const { Option } = Select;
 
@@ -15,54 +15,92 @@ const validateMessages = {
   required: "${label} is required!",
 };
 
-const onFinish = (values) => {
-  Axios.post('http://localhost:8080/save-issue', {values})
-  .then(res => {
-    if (res.statusText === "Created") {
-      success();
-    }
-    //console.log(res);
-    //console.log(res.data);
-    //console.log(res.status); 201
-    //console.log(res.statusText); Created
-  })
-};
-
-const children = [];
-
 const success = () => {
-  message.success('Successfully Created...');
+  message.success("Successfully Created...");
 };
 
 class addIssue extends Component {
   constructor(props) {
     super(props);
+    this.state = {
+      title : "",
+      key : "",
+    };
+    this.form = React.createRef();
+    this.handleChange = this.handleChange.bind(this);
+    this.tags = [
+      "Trace",
+      "Monitor",
+      "Batch",
+      "MML",
+      "Alarm/Event",
+      "Self Test",
+      "Device Maintenance",
+      "Parse",
+      "Save",
+    ];
+  }
 
-    this.state = {};
+  onFinish = (values) => {
+    Axios.post("http://localhost:8080/save-issue", { values })
+      .then((res) => {
+        if (res.statusText === "Created") {
+          success();
+          this.form.resetFields();
+          this.props.onEditChange();
+        }
+        //console.log(res);
+        //console.log(res.data);
+        //console.log(res.status); 201
+        //console.log(res.statusText); Created
+      })
+      .catch((error) => {
+        message.error("Error" + error);
+        console.log("Error " + error);
+      });
+  };
+
+  handleChange() {
+    this.props.onEditChange();
+  }
+
+  componentDidMount = async () => {
+    this.props.onIssueChange === "dts" ? this.setState({
+      title : "DTS ID",
+      key : "dtsId"
+    }) : this.setState({
+      title : "Requirement ID",
+      key : "reqId"
+    })
   }
 
   render() {
     return (
       <div>
+        <div className={style.newIssue}>
+          <Button onClick={this.handleChange} type="primary">
+            <ArrowLeftOutlined />
+            Back
+          </Button>
+        </div>
         <div className={style.form}>
           <Form
             {...layout}
+            ref={(ref) => {
+              this.form = ref;
+            }}
             name="nest-messages"
-            onFinish={onFinish}
+            onFinish={this.onFinish}
             validateMessages={validateMessages}
           >
             <Form.Item
-              name={"dtsId"}
-              label="DTS ID"
+              name={this.state.key}
+              label={this.state.title}
               rules={[{ required: true }]}
             >
               <Input />
             </Form.Item>
-            <Form.Item
-              name={"link"}
-              label="Link"
-              rules={[{ required: true }]}
-            >
+            <Form.Item name={"link"} label="Link" rules={[{ required: true }]}>
               <Input />
             </Form.Item>
             <Form.Item
@@ -77,19 +115,14 @@ class addIssue extends Component {
               label="Labels"
               rules={[{ required: true }]}
             >
-              <Select mode="tags" placeholder="Please enter a tag">
-                {children}
+              <Select mode="multiple" placeholder="Please enter a tag">
+                {this.tags.map((tag, i) => (
+                  <Option value={tag}>{tag}</Option>
+                ))}
               </Select>
             </Form.Item>
-            <Form.Item
-              name={"team"}
-              label="Team"
-              rules={[{ required: true }]}
-            >
-              <Select
-                placeholder="Please select a team"
-                allowClear
-              >
+            <Form.Item name={"team"} label="Team" rules={[{ required: true }]}>
+              <Select placeholder="Please select a team" allowClear>
                 <Option value="client">Client</Option>
                 <Option value="server">Server</Option>
               </Select>
@@ -109,7 +142,7 @@ class addIssue extends Component {
               <Input.TextArea />
             </Form.Item>
             <Form.Item name={"solvedDate"} label="Solved Date">
-              <DatePicker showTime />
+              <DatePicker />
             </Form.Item>
             <Form.Item name={"developer"} label="Developer">
               <Input />

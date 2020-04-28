@@ -4,7 +4,7 @@ import {
   CloudServerOutlined,
   DesktopOutlined,
 } from "@ant-design/icons";
-import style from "./style.module.scss";
+import style from "./css/table.module.scss";
 
 const { Sider } = Layout;
 
